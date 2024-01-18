@@ -7,7 +7,7 @@ import 'package:path_provider/path_provider.dart'; // State Management
 import 'note.dart';
 
 class NoteDatabase extends ChangeNotifier {
-  static late Isar isar; // Not sure what this does
+  static late Isar isar; // Initialise isar variable for Isar instance
 
   // Initialise Database
   static Future<void> initialize() async {
@@ -24,15 +24,20 @@ class NoteDatabase extends ChangeNotifier {
   final List<Note> currentNotes = [];
 
 // Create
-  Future<void> addNote(String userInputText) async {
+  Future<void> addNote(String userInputText, String userInputDay, int userInputOrder) async {
     // Create new Note object
-    final newNote = Note()..text = userInputText;
+    if (userInputText != null && userInputDay != null && userInputOrder != null) {
+      final newNote = Note()
+        ..text = userInputText
+        ..dayOfWeek = userInputDay
+        ..exerciseOrder = userInputOrder;
 
-    // Save to DB
-    await isar.writeTxn(() => isar.notes.put(newNote));
+      // Save to DB
+      await isar.writeTxn(() => isar.notes.put(newNote));
 
-    // Re-read from DB - Refreshes Buffer
-    fetchNotes();
+      // Re-read from DB - Refreshes Buffer
+      fetchNotes();
+    }
   }
 
 // Read

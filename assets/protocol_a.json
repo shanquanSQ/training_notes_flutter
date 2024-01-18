@@ -1,0 +1,136 @@
+{
+  "days": [
+    {
+      "id": 1,
+      "data": {
+        "Sunday": {
+          "Exercises": [
+            "Jogging",
+            "Rowing",
+            "Cycling",
+            "Swimming",
+            "Hiking"
+          ],
+          "Description": ["point 1", "point 2"]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "data": {
+        "Monday": {
+          "Exercises": [
+            "Jogging",
+            "Rowing",
+            "Cycling",
+            "Swimming",
+            "Hiking"
+          ],
+          "Description": ["point 1", "point 2"]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "data": {
+        "Tuesday": {
+          "Exercises": {
+            "Quadriceps": [
+              "Leg Extension",
+              "Hack Squats"
+            ],
+            "Hamstrings": [
+              "Leg Curls",
+              "Glute-Ham-Raises"
+            ],
+            "Calves": [
+              "Standing Raises",
+              "Seated Raises"
+            ]
+          },
+          "Description": ["point 1", "point 2"]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "data": {
+        "Wednesday": {
+          "Exercises": [
+            "Heat Exposure Protocol",
+            "Cold Exposure Protocol"
+          ],
+          "Description": ["point 1", "point 2"]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "data": {
+        "Thursday": {
+          "Exercises": {
+            "Chest": [
+              "Incline Press",
+              "Cable Crossover"
+            ],
+            "Back": [
+              "Chin-Up or Pull-Up",
+              "Seated Row or Dumbbell Row"
+            ],
+            "Shoulders": [
+              "Shoulder Press",
+              "Lateral Raises",
+              "Rear Deltoid Flies"
+            ],
+            "Neck": [
+              "Neck Exercises"
+            ],
+            "Cardio": "Running, rowing, cycling, jumping jacks, stair-climb, jump rope — ideally done outside.",
+            "Description": ["point 1", "point 2"]
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "data": {
+        "Friday": {
+          "Exercises": [
+            "Assault Bike",
+            "Sprint/Jog Intervals",
+            "Rowing",
+            "Skiing Machine",
+            "Sand Sprints"
+          ],
+          "Description": ["point 1", "point 2"]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "data": {
+        "Saturday": {
+          "Exercises": {
+            "Biceps": [
+              "Incline Curl",
+              "Dumbbell Curls"
+            ],
+            "Triceps": [
+              "Overhead Extensions",
+              "Triceps Dips or Regular Dips"
+            ],
+            "Calves": [
+              "Standing Calf Raise",
+              "Seated Calf Raise",
+              "Tibialis Raises"
+            ],
+            "Neck": [
+              "Neck Exercises"
+            ],
+            "Description": ["point 1", "point 2"]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:trngprotocol_app/models/note_database.dart';
 
 class DayCard extends StatefulWidget {
   // const DayCard({super.key});
 
   late String dayName;
-  late List<String> exerciseList;
+  late List<dynamic> exerciseList;
 
   // List<String> exerciseList = ['chin up', 'push up'];
 
@@ -32,7 +34,7 @@ class _DayCardState extends State<DayCard> {
                     const Text('Input New Exercise:'),
                     TextField(
                       controller: textController,
-                      maxLines: 5,
+                      // maxLines: 5,
                       decoration: InputDecoration(),
                     ),
                   ],
@@ -40,17 +42,31 @@ class _DayCardState extends State<DayCard> {
                 actions: [
                   TextButton(
                     onPressed: () {
-                      print('yay');
-                      textController.clear(); // To remove text on next dialog
+                      // Create Note Functionality
+                      context.read<NoteDatabase>().addNote(textController.text, widget.dayName, 1);
+
+                      // Remove text from next dialog + remove modal dialog
+                      textController.clear();
                       Navigator.pop(context);
                     },
                     child: const Text(
                       'Create',
                       // style: TextStyle(),
                     ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Close'),
                   )
                 ],
               ));
+    }
+
+    // Read Database - Get all entries for the dayOfWeek , and sort by exerciseOrder
+    void getAllExercise(){
+
     }
 
     return Card(
