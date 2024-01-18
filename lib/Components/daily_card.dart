@@ -80,7 +80,9 @@ class _DayCardState extends State<DayCard> {
               Text(widget.dayName, style: TextStyle(fontWeight: FontWeight.bold)),
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: widget.exerciseList.map((element) => Text(element)).toList()),
+                  children: widget.exerciseList.map((element) => Text(element)).toList()
+              ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
